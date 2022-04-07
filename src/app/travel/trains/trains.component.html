@@ -1,0 +1,191 @@
+<style>
+    input[type=text] {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid silver;
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    button {
+        border: 2px solid silver;
+        background-color: white;
+        font-size: 16px;
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    button:active {
+        border-color: black;
+    }
+
+    #container {
+        border: 2px darkred dashed;
+        padding: 20px;
+    }
+</style>
+
+<div class="animation">
+    <div class="environment">
+  
+        <!-- <div class="background">
+          <div class="hills">
+            <div class="large"></div>
+            <div class="small"></div>
+            <div class="medium"></div>
+          </div>
+        </div>
+        
+        <div class="foreground">
+          <div class="hills">
+            <div class="large"></div>
+            <div class="small"></div>
+            <div class="medium"></div>
+          </div>
+        </div> -->
+        <div class="train-on-track">
+          <div class="train">
+            <div class="locomotive">
+              <div class="paint white"></div>
+              <div class="paint red">
+                <div class="logo">
+                  <span>DB</span>
+                </div>
+              </div>
+              <div class="windshield"></div>
+              <div class="window one"></div>
+              <div class="window two"></div>
+              <div class="window three"></div>
+              <div class="window four"></div>
+              <div class="gears front">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+              </div>
+              <div class="gears rear">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+              </div>
+            </div>
+      
+            <div class="connector"></div>
+            <div class="waggon">
+              <div class="paint white"></div>
+              <div class="paint red">
+                <div class="logo">
+                  <span>DB</span>
+                </div>
+              </div>
+              <div class="door">
+                <div class="window"></div>
+              </div>
+              <div class="window one"></div>
+              <div class="window two"></div>
+              <div class="window three"></div>
+              <div class="window four"></div>
+              <div class="paint graffiti"></div>
+              <div class="gears front">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+              </div>
+              <div class="gears rear">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+              </div>
+            </div>
+            <div class="connector"></div>
+            <div class="waggon">
+              <div class="paint white"></div>
+              <div class="paint red">
+                <div class="logo">
+                  <span>DB</span>
+                </div>
+              </div>
+              <div class="door">
+                <div class="window"></div>
+              </div>
+              <div class="window one"></div>
+              <div class="window two"></div>
+              <div class="window three"></div>
+              <div class="window four"></div>
+              <div class="gears front">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+              </div>
+              <div class="gears rear">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+              </div>
+            </div>
+            <div class="connector"></div>
+            <div class="locomotive back">
+              <div class="paint white"></div>
+              <div class="paint red">
+                <div class="logo">
+                  <span>DB</span>
+                </div>
+              </div>
+              <div class="windshield"></div>
+              <div class="window one"></div>
+              <div class="window two"></div>
+              <div class="window three"></div>
+              <div class="window four"></div>
+              <div class="gears front">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+              </div>
+              <div class="gears rear">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="tracks"></div>
+          <div class="pole"></div>
+          <div class="pole"></div> -->
+        </div>
+      </div>
+</div>
+
+<div id="container">
+
+    <div>
+        <img src="../../../assets/angular.png" width="50">
+    </div>
+    <h1>Trains</h1>
+    <div class="dropdown">
+        <!-- <label>Origin City</label> -->
+        <select class="dropdownSelect" id="originCity">
+            <option value="" selected>Enter Origin City</option>
+            <option value="BLR">Bangalore</option>
+            <option value="MAA">Chennai</option>
+            <option value="DEL">Delhi</option>
+            <option value="HYD">Hyderabad</option>
+        </select>
+    </div>
+    <br>
+    <div class="dropdown">
+        <select class="dropdownSelect" id="originCity">
+            <option value="" selected>Enter Destination City</option>
+            <option value="BLR">Bangalore</option>
+            <option value="MAA">Chennai</option>
+            <option value="DEL">Delhi</option>
+            <option value="HYD">Hyderabad</option>
+        </select>
+    </div>
+    <div>
+    </div>
+    <div>
+        <ng-container #vc></ng-container>
+    </div>
+    <button> Go</button>
+</div>
+
+<button (click)="go()"> Travel Home Page </button>

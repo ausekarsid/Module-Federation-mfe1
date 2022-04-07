@@ -1,0 +1,335 @@
+input.ng-touched.ng-valid,
+select.ng-touched.ng-valid {
+  border-color: #281C38;
+  border-width: 2px;
+}
+
+input.ng-touched.ng-invalid,
+select.ng-touched.ng-invalid {
+  border-color: red;
+  border-width: 2px;
+}
+
+.dropdown {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 40px;
+}
+select#originCity {
+    position: relative;
+    display: block;
+    width: 200px;
+    padding: 10px;
+    background: gainsboro;
+}
+
+
+
+
+
+html {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #81C3D7;
+    font-size: 6px;
+  }
+  
+  .environment {
+    display: grid;
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 60vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+  
+  .background {
+    display: none;
+    grid-row: 3/span 2;
+    z-index: -2;
+  }
+  
+  .foreground {
+    display: none;
+    grid-row: 6;
+  }
+  
+  .train-on-track {
+    grid-row: 6;
+  }
+  
+  .tracks {
+    display: block;
+    width: 100%;
+    height: 1.3rem;
+    background: linear-gradient(to bottom, #D9DCD6 0%, #D9DCD6 30%, #BFC0C0 30%, #BFC0C0 100%);
+    z-index: 2;
+  }
+  
+  .hills {
+    position: relative;
+  }
+  .hills .small {
+    position: absolute;
+    bottom: -20px;
+    left: 1rem;
+    width: 80rem;
+    height: 80rem;
+    border-radius: 50rem 60rem;
+    transform: rotateX(54deg) translateX(-13%) translateY(93%) skew(-17deg);
+    background-color: #9BE236;
+  }
+  .hills .medium {
+    position: absolute;
+    bottom: -20px;
+    left: 1rem;
+    width: 80rem;
+    height: 80rem;
+    border-radius: 50rem 60rem;
+    transform: translateX(45rem) translateY(70%) skew(-10deg);
+    background-color: #89D61D;
+  }
+  .hills .large {
+    position: absolute;
+    bottom: -20px;
+    left: 1rem;
+    width: 140rem;
+    height: 140rem;
+    border-radius: 100rem 100rem;
+    transform: translateX(150rem) translateY(80%) skew(40deg);
+    background-color: #72B01D;
+  }
+  
+  .background .hills .large {
+    transform: translateX(140rem) translateY(80%) skew(20deg);
+  }
+  .background .hills .medium {
+    transform: translateX(65rem) translateY(90%) skew(10deg);
+  }
+  .background .hills .small {
+    transform: rotateX(54deg) translateX(-13%) translateY(93%) skew(-17deg);
+  }
+  
+  .pole {
+    position: absolute;
+    bottom: 0;
+    grid-row: 6;
+    width: 2rem;
+    height: 17rem;
+    background-color: grey;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0) 45%, yellow 45%, yellow 66%, rgba(0, 0, 0, 0) 66%), #353535;
+    background-size: 100% 25%;
+    border: 0.5rem solid #353535;
+  }
+  .pole:last-of-type {
+    right: 0;
+  }
+  
+  .paint.graffiti {
+    grid-column: 1/span all;
+    grid-row: 1/span all;
+    background: url("https://thmsnhl.de/sumcumograffiti.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    z-index: 50;
+  }
+  
+  .paint {
+    grid-column: 1/span all;
+  }
+  .paint.white {
+    grid-colum: 1/span all;
+    grid-row: 1/span 5;
+    background-color: #fff;
+  }
+  .paint.red {
+    grid-row: 4;
+    background-color: red;
+  }
+  
+  .logo {
+    width: 1.8rem;
+    text-align: center;
+    background-color: #fff;
+    border: 0.125rem solid #fff;
+    margin-top: -0.125rem;
+    transform: translateX(500%);
+  }
+  .logo span {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 0.125rem solid red;
+    color: red;
+    font-weight: bold;
+    font-size: 0.7rem;
+    border-radius: 0.3rem;
+  }
+  
+  .train {
+    display: grid;
+    grid-template-columns: 1fr 40rem 3rem;
+    grid-template-columns: repeat(4, 40rem 3rem);
+    grid-template-rows: 12rem;
+  }
+  
+  .locomotive,
+  .waggon {
+    display: grid;
+    grid-row: 1;
+    grid-template-rows: 1fr 3fr 1fr 1fr 2fr;
+    width: 40rem;
+    height: 11rem;
+    overflow: hidden;
+    padding-bottom: 1.5rem;
+  }
+  
+  .locomotive {
+    grid-template-columns: 7rem 2rem repeat(4, 1fr 2rem);
+    border-radius: 20rem 1rem 1rem 4rem;
+  }
+  .locomotive.back {
+    transform: scaleX(-1);
+    z-index: -1;
+  }
+  .locomotive.back .logo {
+    transform: scaleX(-1) translateX(-500%);
+  }
+  
+  .waggon {
+    grid-template-columns: repeat(5, 1fr 2rem);
+    border-radius: 1rem;
+  }
+  
+  .windshield {
+    grid-column: 1/span 1;
+    transform: translateX(20%) translateY(-11%) rotate(14deg) scale(1.4);
+    grid-row: 2;
+    width: 5rem;
+    height: 5rem;
+    background-color: #454955;
+    border-radius: 9rem 1rem;
+  }
+  
+  .window {
+    height: 5rem;
+    background-color: #454955;
+    grid-row: 2;
+    border-radius: 1rem;
+  }
+  .window.one {
+    grid-column: 3;
+  }
+  .window.two {
+    grid-column: 5;
+  }
+  .window.three {
+    grid-column: 7;
+  }
+  .window.four {
+    grid-column: 9;
+  }
+  
+  .door {
+    position: relative;
+    margin-left: 1rem;
+    border: 0.125rem solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem 0.5rem 0 0;
+    grid-row: 2/span 4;
+    grid-column: 1;
+  }
+  .door .window {
+    margin: 0.7rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+  }
+  .door::before {
+    content: "";
+    position: absolute;
+    right: 0.7rem;
+    top: 40%;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, #72B01D 30%, #72B01D 30%, #8B8C8C 50%, #8B8C8C 51%, #666A75 51%);
+  }
+  .door::after {
+    content: "";
+    position: absolute;
+    right: 0.7rem;
+    top: 50%;
+    width: 0.5rem;
+    height: 1rem;
+    background-color: #fff;
+    box-shadow: -0.15rem 0 0.15rem #888;
+  }
+  
+  .gears {
+    position: relative;
+    width: 10rem;
+    height: 0.6rem;
+    grid-row: 6;
+    border-radius: 0 0 50% 50%;
+    background-color: #26282F;
+  }
+  .gears.front {
+    grid-column: 2/span 2;
+  }
+  .gears.rear {
+    grid-column: 8/span 2;
+  }
+  .gears .wheel {
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    bottom: -1.5rem;
+    left: 1rem;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, #666A75 30%, #8B8C8C 30%, #8B8C8C 50%, #8B8C8C 51%, #666A75 51%);
+    z-index: -1;
+  }
+  .gears .wheel:last-child {
+    left: unset;
+    right: 1rem;
+  }
+  
+  .connector {
+    grid-row: 1;
+    width: 100%;
+    height: 75%;
+    transform: translateY(1rem);
+    background: linear-gradient(to right, #454955, #454955 50%, #1A1B1F 51%);
+    background-size: 25%;
+  }
+  
+  .train {
+    animation: wobble 1s ease-in-out alternate infinite;
+    animation: drive 10s ease-in-out infinite;
+    position: relative;
+    z-index: -1;
+  }
+  
+  @keyframes wobble {
+    0% {
+      transform: translateY(1%);
+    }
+    100% {
+      transform: translateY(-1%);
+    }
+  }
+  @keyframes drive {
+    0% {
+      transform: translateX(-150%);
+    }
+    40% {
+      transform: translateX(7%);
+    }
+    100% {
+      transform: translateX(150%);
+    }
+  }

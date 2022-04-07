@@ -1,0 +1,80 @@
+<style>
+    input[type=text] {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid silver;
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    button {
+        border: 2px solid silver;
+        background-color: white;
+        font-size: 16px;
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    button:active {
+        border-color: black;
+    }
+
+    #container {
+        border: 2px darkred dashed;
+        padding: 20px;
+    }
+</style>
+<div class="animation">
+
+    <div class="cloud cloud1">
+        <div class="light"></div>
+        <img
+            src="https://images.vexels.com/media/users/3/145795/isolated/preview/05cd33059a006bf49006097af4ccba98-plane-in-flight-by-vexels.png" />
+    </div>
+</div>
+
+<div id="container">
+
+    <div>
+        <img src="../../../assets/angular.png" width="50">
+    </div>
+    <h1>Flights</h1>
+    <div class="dropdown">
+        <!-- <label>Origin City</label> -->
+        <select class="dropdownSelect" id="originCity">
+            <option value="" selected>Enter Origin City</option>
+            <option value="BLR">Bangalore</option>
+            <option value="MAA">Chennai</option>
+            <option value="DEL">Delhi</option>
+            <option value="HYD">Hyderabad</option>
+        </select>
+    </div>
+    <br>
+    <div class="dropdown">
+        <select class="dropdownSelect" id="originCity">
+            <option value="" selected>Enter Destination City</option>
+            <option value="BLR">Bangalore</option>
+            <option value="MAA">Chennai</option>
+            <option value="DEL">Delhi</option>
+            <option value="HYD">Hyderabad</option>
+        </select>
+    </div>
+    <div>
+    </div>
+    <div>
+        <ng-container #vc></ng-container>
+    </div>
+
+    <button> Go</button>
+</div>
+
+
+<button (click)="go()"> Travel Home Page </button>
